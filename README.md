@@ -153,6 +153,7 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 ####三角测量
 在做了几个估算之后，我们有必要对估算进行三角测量。具体做法如下:在故事一个故事时，根据这个故事与其他故事的关系进行估算。
 
+
 ###4. 测试用户故事
 
 
