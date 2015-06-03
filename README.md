@@ -171,6 +171,10 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 * 这个故事在什么情况下会**出错**？
 
 ##Sprint计划
+###准备Sprint计划
+###制定Sprint计划
+###发布Sprint计划
+
 ##Sprint Backlog
 ##1-4 Week Sprint
 ##Sprint演示
