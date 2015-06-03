@@ -140,6 +140,7 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 * **Detail**(细节) 代入用户角色，更加详细地描述故事有关细节。大概格式如下：作为一个(As a)什么样的角色，想(want)做什么，就应该(so that)得到这样的结果。
 * **Scenario**(故事情节) 其实它就是一个简单的测试规范，先这样做，然后这样做，就应该得到这样结果。测试用例都遵循三段式**Given-When-Then**的描述，清晰地表达测试用例是测试什么样的对象或数据结构，在基于什么上下文或情景，然后做出什么响应。
 
+可以参考我在[wiki](https://github.com/samlaudev/ElemeProject/wiki)的**Product Backlog**编写的[饿了么的用户故事](https://github.com/samlaudev/ElemeProject/wiki/Product-Backlog)
 
 ###3. 估算用户故事
 
