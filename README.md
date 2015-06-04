@@ -63,7 +63,7 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 根据上面图示，我们简单概括Scrum的开发过程：
 
 1. **Product Owner**(一般都是产品经理)从实际用户、交互设计师、开发人员和测试人员中收集用户故事，从而创建**Product Backlog**来记录所有的用户故事。
-2. 
+2. 根据由Product Owner收集的Product Backlog，所有团队成员进行Sprint计划会议，主要是确定Sprint目标、演示时间、团队成员名单、Sprint backlog和每日Scrum会议的时间和地点。
 
 ##Product Backlog
 ###1. 用户角色建模
