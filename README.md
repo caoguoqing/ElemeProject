@@ -229,6 +229,16 @@ Sprint计划会议时间：13：00 - 17：00 (每个小时休息10分钟)
 * 每日Scrum会议的时间和地点
 
 ###发布Sprint计划
+我们要让整个公司的人了解我们做什么，我们使用如图所示的**Sprint信息页**(截取[硝烟中的Scrum和XP](http://book.douban.com/subject/3390446/)里面的图)。
+
+![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Sprint-Information-Page.png)
+
+Sprint会议一**结束**，ScrumMaster就将**Sprint信息页**通过Email发给每一位团队成员。此外，ScrumMaster还会把sprint信息页打印出来，贴在团队房间的墙上。
+
+当Sprint接近尾声时，ScrumMaster会把即将来临的演示告知每个人。
+
+这样，就没人还能找借口说**不知道**你们的工作状态。
+
 
 ##Sprint Backlog
 ##1-4 Week Sprint
