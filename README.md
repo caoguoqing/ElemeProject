@@ -172,6 +172,12 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 
 ##Sprint计划
 ###准备Sprint计划
+在开始Sprint计划会议之前，必须确保Product Backlog**必须存在**。但不要求所有的故事必须都完美无缺，所有的优先级都固定不变。但以下几点是必须满足的：
+
+* 只能有一个Product Backlog和一个Product Owner(只开发一个产品)
+* 所有的用户故事的重要性都**被评分**，不同的重要性对应不同的分数
+* 有时故事是由其他人添加的，所以Product Owner应该**理解每个故事的含义**
+
 ###制定Sprint计划
 ###发布Sprint计划
 
