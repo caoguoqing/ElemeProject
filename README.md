@@ -182,10 +182,26 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 ####Sprint计划会议日程
 Sprint计划会议时间：13：00 - 17：00 (每个小时休息10分钟)
 
-* **13：00 - 13：30** Product Owner对sprint目标介绍，概括product backlog，确定演示时间和地点
+* **13：00 - 13：30** Product Owner概括product backlog，对sprint目标介绍，确定演示时间和地点
 * **13：30 - 15：00** 团队成员一起参与**估算时间**；根据实际情况下拆分用户故事，product owner在必要时修改其重要性，所有重要性高的用户故事都必须填写故事情节
 * **15：00 - 16：00** 基于团队估算的生产率，团队从product backlog选择优先级高的故事放在sprint backlog
 * **16：00 - 17：00** 进一步将故事拆分为任务，确定每日Scrum会议的固定时间和地点。
+
+####确定Sprint目标
+
+####确定Sprint长度
+**短的Sprint长度好处**：短的Sprint=短的反馈周期=更频繁的交付=更频繁的客户反馈=在错误方向花的时间更少
+
+**长的Sprint长度好处**：团队可以有更多时间充分准备，解决发生的问题，继续完成sprint目标；不会给频繁的sprint计划和演示压得透不过气
+
+**建议**：刚开始要试验sprint的长度，不要浪费时间分析，试验几个sprint之后再进行调整。不过，确定自己喜欢的长度之后，就尽量长时间坚持使用。
+
+####估算时间
+ * 本能反应
+ * 生产率计算
+
+####确定Sprint包含的故事
+
 
 ####Sprint计划成果
 * Sprint目标
