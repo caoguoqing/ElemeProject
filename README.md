@@ -249,5 +249,7 @@ Sprint计划会议时间：13：00 - 17：00 (每个小时休息10分钟)
 
 ##Code Review
 
+##Bug跟踪
+
 <b id="join_us"></b>
 #Join Us
