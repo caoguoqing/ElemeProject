@@ -179,6 +179,21 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 * 有时故事是由其他人添加的，所以Product Owner应该**理解每个故事的含义**
 
 ###制定Sprint计划
+####Sprint计划会议日程
+Sprint计划会议时间：13：00 - 17：00 (每个小时休息10分钟)
+
+* **13：00 - 13：30** Product Owner对sprint目标介绍，概括product backlog，确定演示时间和地点
+* **13：30 - 15：00** 团队成员一起参与**估算时间**；根据实际情况下拆分用户故事，product owner在必要时修改其重要性，所有重要性高的用户故事都必须填写故事情节
+* **15：00 - 16：00** 基于团队估算的生产率，团队从product backlog选择优先级高的故事放在sprint backlog
+* **16：00 - 17：00** 进一步将故事拆分为任务，确定每日Scrum会议的固定时间和地点。
+
+####Sprint计划成果
+* Sprint目标
+* Sprint演示日期
+* 团队成员名单
+* Sprint backlog
+* 每日Scrum会议的时间和地点
+
 ###发布Sprint计划
 
 ##Sprint Backlog
