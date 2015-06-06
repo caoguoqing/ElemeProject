@@ -273,9 +273,31 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 
 想了解任务板作用更多详情，查看[看板任务管理](http://www.infoq.com/cn/articles/hl-kanban-task-management)
 
-##Burndown Chart作用
+###燃尽图作用
+借助[硝烟中的Scrum和XP](http://book.douban.com/subject/3390446/)的燃尽图来解释如何发挥作用
+<div align="center">
+<img src="https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Burndown-Chart.png"/>
+</div>
+
+* Sprint的第一天，8月1号，团队估算出剩余70个故事点要完成，其实就是整个sprint的**估算生产率**
+* 到了8月16号，大概还有15个故事点需要完成。与表示**趋势的虚线**相比，团队工作的完成进度差不多还是沿着正轨方向，到sprint演示那天应该能完成所有的任务。
+* 每周工作天数只有**5天**，因为很少有人会在周末干活。
+
+####任务板警示标记
+* 需要从sprint中移除一些用户故事
+![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Need-Remove-User-Story.png)
+
+* 需要向sprint中添加一些用户故事
+![](https://github.com/samlaudev/ElemeProject/raw/master/ScreenShots/Need-Remove-User-Story.png)
+
+* 需要调整用户故事优先级
+![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Need-Adjust-Priority.png)
+
 
 ##1-4 Week Sprint
+###每日例会
+
+
 ##Sprint演示
 
 <b id="best_practices"></b>
