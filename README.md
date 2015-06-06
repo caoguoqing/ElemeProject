@@ -273,7 +273,7 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 
 想了解任务板作用更多详情，查看[看板任务管理](http://www.infoq.com/cn/articles/hl-kanban-task-management)
 
-###燃烧版作用
+###燃烧板作用
 
 ##1-4 Week Sprint
 ##Sprint演示
