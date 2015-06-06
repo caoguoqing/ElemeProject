@@ -247,7 +247,7 @@ Sprint会议一**结束**，ScrumMaster就将**Sprint信息页**通过Email发�
 Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、Leangoo、Jira和Teambition等，你可以根据自己的喜好来选择。
 
 * 挂在墙上的任务板
-![硝烟中的Scrum和Xp的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Task-Board.png)
+![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Task-Board.png)
 
 * [Leangoo](http://home.leangoo.com)
 ![Leangoo的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Leangoo-Task-Board.jpg)
