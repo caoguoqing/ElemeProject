@@ -244,25 +244,36 @@ Sprint会议一**结束**，ScrumMaster就将**Sprint信息页**通过Email发�
 完成Sprint计划会议后，ScrumMaster应该就开始创建Sprint Backlog，要在第一次每日例会之前完成。
 
 ###Sprint Backlog形式
-Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、Leangoo、Jira和Teambition等，你可以根据自己的喜好来选择。
+Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、[Leangoo](http://home.leangoo.com)、[Jira](https://www.atlassian.com/software/jira/)和[Teambition](https://www.teambition.com)等，你可以根据自己的喜好来选择。
 
 * 挂在墙上的任务板
 <div align="center">
 <img src="https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Task-Board.png"/>
 </div>
 
-* [Leangoo](http://home.leangoo.com)
+* Leangoo
 ![Leangoo的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Leangoo-Task-Board.jpg)
 
-* [Jira](https://www.atlassian.com/software/jira/)
+* Jira
 ![Jira的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Jira-Task-Board.png)
 
-* [Teambition](https://www.teambition.com)
+* Teambition
 ![Teambition product backlog](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Teambition-Task-Board.gif)
 ![Teambition sprint backlog](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Teambition-Sprint-Backlog.gif)
 具体实践建议可以参考知乎的一个关于[scrum工具大家有什么推荐](http://www.zhihu.com/question/19609029)问题**李武**的回答。
 
-###
+###任务板作用
+作为开发团队的**管理者**，在开发过程中有些问题是比较关注，例如：分配好的任务能否按时完成、整个项目进度是否还在计划当中、团队成员是否能够高效的工作、大家遇到什么问题以及如何解决等。下面介绍如何使用任务板来分配、跟踪和管理任务，以及如何帮助我们消除浪费、解决项目管理中问题。
+
+* 可视化任务板管理
+* 如何减少返工带来的浪费
+* 如何避免多任务并行
+* 如何减少半成品库存，缩短交付周期
+* 迭代产能的度量，计划和其他
+
+想了解任务板作用更多详情，查看[看板任务管理](http://www.infoq.com/cn/articles/hl-kanban-task-management)
+
+###燃烧版作用
 
 ##1-4 Week Sprint
 ##Sprint演示
