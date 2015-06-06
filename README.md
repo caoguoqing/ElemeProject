@@ -244,10 +244,13 @@ Sprint会议一**结束**，ScrumMaster就将**Sprint信息页**通过Email发�
 ###Sprint Backlog形式
 * 挂在墙上的任务板
 ![硝烟中的Scrum和Xp的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Task-Board.png)
+
 * [Leangoo](http://home.leangoo.com)
 ![Leangoo的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Leangoo-Task-Board.jpg)
+
 * [Jira](https://www.atlassian.com/software/jira/)
 ![Jira的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Jira-Task-Board.png)
+
 * [Teambition](https://www.teambition.com)
 ![Teambition product backlog](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Teambition-Task-Board.gif)
 ![Teambition sprint backlog](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Teambition-Sprint-Backlog.gif)
