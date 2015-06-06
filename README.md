@@ -241,7 +241,11 @@ Sprint会议一**结束**，ScrumMaster就将**Sprint信息页**通过Email发�
 
 
 ##Sprint Backlog
+完成Sprint计划会议后，ScrumMaster应该就开始创建Sprint Backlog，要在第一次每日例会之前完成。
+
 ###Sprint Backlog形式
+Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、Leangoo、Jira和Teambition等，你可以根据自己的喜好来选择。
+
 * 挂在墙上的任务板
 ![硝烟中的Scrum和Xp的任务板](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Task-Board.png)
 
