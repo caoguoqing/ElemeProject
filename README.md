@@ -297,6 +297,10 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 * 需要调整用户故事优先级
 ![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Need-Adjust-Priority.png)
 
+###Teambition创建Sprint Backlog
+* 邀请团队成员
+* 创建Sprint Backlog
+* 燃尽图
 
 ##1-4 Week Sprint
 ###每日例会
