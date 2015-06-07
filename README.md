@@ -66,6 +66,7 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 2. 根据由Product Owner收集的Product Backlog，所有团队成员进行**Sprint计划会议**，主要是确定Sprint目标、演示时间、团队成员名单、Sprint backlog和每日Scrum会议的时间和地点。
 3. 完成Sprint计划会议后，ScrumMaster应该就开始创建Sprint Backlog，Sprint Backlog应该必须包含**任务板**和**燃尽图**。
 4. 进入Sprint长度为1-4星期的Sprint开发周期，在这个周期内，每天需要召开Daily Scrum meeting。
+5. 到了演示
 
 ##Product Backlog
 ###1. 用户角色建模
@@ -307,6 +308,21 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 进行每日例会**主要目的**是团队成员遇到问题时将问题提出来，大家一起思考和解决。
 
 ##Sprint演示
+###为什么要Sprint演示
+* 团队成果得到认可，他们会感觉很好
+* 其他人可以了解你的团队在做些什么
+* 吸引一些人的注意，并得到重要反馈
+* 演示是一种社会活动，不同的团队可以互相交流
+* 迫使团队**真正完成**一些工作来进行发布
+
+###Sprint演示检查列表
+* 清晰地阐述Sprint目标
+* 不要花太多的时间准备演示，尤其不要做花俏的演讲
+* 让演示关注于业务层次，不要管技术细节
+* 不要演示一大堆细碎的bug修复和微不足道的特性
+* 保持快节奏地演示
+
+###处理“无法演示”的工作
 
 <b id="best_practices"></b>
 #Best Practices
