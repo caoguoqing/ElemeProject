@@ -1,6 +1,6 @@
 //
-//  ElemeAppTests.m
-//  ElemeAppTests
+//  ElemeProjectTests.m
+//  ElemeProjectTests
 //
 //  Created by Sam Lau on 6/7/15.
 //  Copyright (c) 2015 Sam Lau. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface ElemeAppTests : XCTestCase
+@interface ElemeProjectTests : XCTestCase
 
 @end
 
-@implementation ElemeAppTests
+@implementation ElemeProjectTests
 
 - (void)setUp {
     [super setUp];
