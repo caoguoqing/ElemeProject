@@ -65,7 +65,7 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 1. Product Owner(一般都是产品经理)从实际用户、交互设计师、开发人员和测试人员中收集用户故事，从而创建**Product Backlog**来记录所有的用户故事。
 2. 根据由Product Owner收集的Product Backlog，所有团队成员进行**Sprint计划会议**，主要是确定Sprint目标、演示时间、团队成员名单、Sprint backlog和每日Scrum会议的时间和地点。
 3. 完成Sprint计划会议后，ScrumMaster应该就开始创建Sprint Backlog，Sprint Backlog应该必须包含**任务板**和**燃尽图**。
-
+4. 进入Sprint长度为1-4星期的Sprint开发周期，在这个周期内，每天需要召开Daily Scrum meeting。
 
 ##Product Backlog
 ###1. 用户角色建模
@@ -298,7 +298,13 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 
 ##1-4 Week Sprint
 ###每日例会
+在Sprint开发周期，每天都在同一个地点、时间进行站立式会议，持续时间一般都超过15分钟。每个团队成员需要汇报以下三个问题：
 
+* 描述昨天已经做的事情
+* 今天将要做的事情
+* 在开发过程遇到什么问题
+
+进行每日例会**主要目的**是团队成员遇到问题时将问题提出来，大家一起思考和解决。
 
 ##Sprint演示
 
