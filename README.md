@@ -66,7 +66,8 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 2. 根据由Product Owner收集的Product Backlog，所有团队成员进行**Sprint计划会议**，主要是确定Sprint目标、演示时间、团队成员名单、Sprint backlog和每日Scrum会议的时间和地点。
 3. 完成Sprint计划会议后，ScrumMaster应该就开始创建Sprint Backlog，Sprint Backlog应该必须包含**任务板**和**燃尽图**。
 4. 进入Sprint长度为1-4星期的Sprint开发周期，在这个周期内，每天需要召开Daily Scrum meeting。
-5. 到了演示
+5. 整个sprint周期结束，召开Sprint Review会议，演示成果给product owner、用户、客户或其他团队看。
+6. 团队成员召开最后的Sprint Retrospective会议，总结本次sprint所犯的错误或遇到问题，如何在下次sprint中如何改进。
 
 ##Product Backlog
 ###1. 用户角色建模
@@ -323,6 +324,21 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 * 保持快节奏地演示
 
 ###处理“无法演示”的工作
+
+##Sprint回顾
+###组织回顾
+* **参与人员**有product owner，开发人员、测试人员等
+* 根据讨论的内容范围，**设定时间**为1至3个小时
+* 在一个能够**不受干扰的情况下的地方**讨论就行，例如：封闭的房间、舒服的沙发或屋顶平台等类似场所
+* 一般不会在团队房间进行回顾，由于环境比较嘈杂，会分散大家的注意力
+* Scrum Master向大家展示sprint backlog，在团队的帮助下对sprint总结
+* 团队成员**轮流发言**，每个人都有机会在不被打断的情况下讲出自己的想法。认为什么是好的，哪些可以做得更好，哪些在下个sprint中需要改进。
+![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Sprint-Review.png)
+
+* 对预估生产率和实际生产率进行比较。如果差异比较大，我们会分析原因。
+
+###团队间传播经验
+
 
 <b id="best_practices"></b>
 #Best Practices
