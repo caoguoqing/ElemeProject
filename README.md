@@ -38,12 +38,12 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 
 现在我们抽象出日期转换到字符串的逻辑到view model，使得代码可以**测试**和**复用**，并且帮view controller**瘦身**。
 
-##项目目录结构
-
-##Objective-C 编码规范
-关于Objective-C的编码规范，请参考我翻译的[raywenderlich.com Objective-C编码规范](https://github.com/samlaudev/Objective-C-Coding-Style)
-
 ##iOS 最佳实践
+关于iOS最佳实践，请参考我的一篇文章[iOS 最佳实践](https://github.com/samlaudev/iOS-Best-Practices)
+
+
+###Objective-C 编码规范
+关于Objective-C的编码规范，请参考我翻译的[raywenderlich.com Objective-C编码规范](https://github.com/samlaudev/Objective-C-Coding-Style)
 
 ##iOS 开源库
 * [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
