@@ -41,12 +41,13 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 ##iOS 最佳实践
 * 初始化项目
 * iOS架构
+* API设计
 * 编码规范
 * iOS开源库
 * 自动化构建
 * 可执行文件瘦身
 
-关于**iOS最佳实践**更多的详细信息，请查看[iOS 最佳实践](https://github.com/samlaudev/iOS-Best-Practices)
+关于**iOS最佳实践**更多的详细信息，请查看[iOS 最佳实践](https://github.com/samlaudev/iOS-Best-Practices)这篇文章
 
 <b id="development_proces"></b>
 #Development Process
