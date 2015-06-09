@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A55A5AB1B24829700534DA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5AA1B24829700534DA1 /* main.m */; };
-		1A55A5B41B24829700534DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5B21B24829700534DA1 /* Main.storyboard */; };
 		1A55A5B61B24829700534DA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5B51B24829700534DA1 /* Images.xcassets */; };
-		1A55A5B91B24829700534DA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5B71B24829700534DA1 /* LaunchScreen.xib */; };
 		1A55A5C51B24829700534DA1 /* ElemeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */; };
 		1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5CE1B248D4500534DA1 /* stylesheet.cas */; };
 		1A741D661B25A87500A08E23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.m */; };
@@ -32,9 +30,7 @@
 		1A55A5A51B24829700534DA1 /* ElemeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElemeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55A5A91B24829700534DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A55A5AA1B24829700534DA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A55A5B31B24829700534DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A55A5B51B24829700534DA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1A55A5B81B24829700534DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1A55A5BE1B24829700534DA1 /* ElemeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElemeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55A5C31B24829700534DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElemeProjectTests.m; sourceTree = "<group>"; };
@@ -100,9 +96,7 @@
 				1A741D6C1B25B08100A08E23 /* Vendor */,
 				1A741D6A1B25B08100A08E23 /* Resources */,
 				1A55A5CE1B248D4500534DA1 /* stylesheet.cas */,
-				1A55A5B21B24829700534DA1 /* Main.storyboard */,
 				1A55A5B51B24829700534DA1 /* Images.xcassets */,
-				1A55A5B71B24829700534DA1 /* LaunchScreen.xib */,
 				1A55A5A81B24829700534DA1 /* Supporting Files */,
 			);
 			path = ElemeProject;
@@ -289,9 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A55A5B41B24829700534DA1 /* Main.storyboard in Resources */,
 				1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */,
-				1A55A5B91B24829700534DA1 /* LaunchScreen.xib in Resources */,
 				1A55A5B61B24829700534DA1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,25 +387,6 @@
 			targetProxy = 1A55A5BF1B24829700534DA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1A55A5B21B24829700534DA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A55A5B31B24829700534DA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1A55A5B71B24829700534DA1 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A55A5B81B24829700534DA1 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1A55A5C61B24829700534DA1 /* Debug */ = {
