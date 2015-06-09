@@ -13,20 +13,23 @@
 @end
 
 @implementation NSString (CASPrivateAdditions)
-- (NSUInteger)cas_hexValue {
+- (NSUInteger)cas_hexValue
+{
     NSUInteger result = 0;
-    sscanf([self UTF8String], "%lx", &result);
+    sscanf([self UTF8String], "%x", &result);
     return result;
 }
 @end
 
 @implementation UIColor (CASAdditions)
 
-+ (UIColor *)cas_colorWithHex:(NSString *)hex {
++ (UIColor*)cas_colorWithHex:(NSString*)hex
+{
     // Remove `#` and `0x`
     if ([hex hasPrefix:@"#"]) {
         hex = [hex substringFromIndex:1];
-    } else if ([hex hasPrefix:@"0x"]) {
+    }
+    else if ([hex hasPrefix:@"0x"]) {
         hex = [hex substringFromIndex:2];
     }
 
@@ -38,12 +41,13 @@
 
     // Make the string 8 characters long for easier parsing
     if (length == 3) {
-        NSString *r = [hex substringWithRange:NSMakeRange(0, 1)];
-        NSString *g = [hex substringWithRange:NSMakeRange(1, 1)];
-        NSString *b = [hex substringWithRange:NSMakeRange(2, 1)];
+        NSString* r = [hex substringWithRange:NSMakeRange(0, 1)];
+        NSString* g = [hex substringWithRange:NSMakeRange(1, 1)];
+        NSString* b = [hex substringWithRange:NSMakeRange(2, 1)];
         hex = [NSString stringWithFormat:@"%@%@%@%@%@%@ff",
-               r, r, g, g, b, b];
-    } else if (length == 6) {
+                        r, r, g, g, b, b];
+    }
+    else if (length == 6) {
         hex = [hex stringByAppendingString:@"ff"];
     }
 
@@ -55,18 +59,20 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-- (NSString *)cas_hexValue {
+- (NSString*)cas_hexValue
+{
     return [self cas_hexValueWithAlpha:NO];
 }
 
-- (NSString *)cas_hexValueWithAlpha:(BOOL)includeAlpha {
+- (NSString*)cas_hexValueWithAlpha:(BOOL)includeAlpha
+{
     CGColorRef color = self.CGColor;
     size_t count = CGColorGetNumberOfComponents(color);
-    const CGFloat *components = CGColorGetComponents(color);
+    const CGFloat* components = CGColorGetComponents(color);
 
-    static NSString *stringFormat = @"%02x%02x%02x";
+    static NSString* stringFormat = @"%02x%02x%02x";
 
-    NSString *hex = nil;
+    NSString* hex = nil;
 
     // Grayscale
     if (count == 2) {
@@ -77,14 +83,14 @@
     // RGB
     else if (count == 4) {
         hex = [NSString stringWithFormat:stringFormat, (NSUInteger)(components[0] * 255.0f),
-               (NSUInteger)(components[1] * 255.0f), (NSUInteger)(components[2] * 255.0f)];
+                        (NSUInteger)(components[1] * 255.0f), (NSUInteger)(components[2] * 255.0f)];
     }
-    
+
     // Add alpha
     if (hex && includeAlpha) {
         hex = [hex stringByAppendingFormat:@"%02lx", (unsigned long)(CGColorGetAlpha(self.CGColor) * 255.0f)];
     }
-    
+
     // Unsupported color space
     return hex;
 }
