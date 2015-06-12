@@ -28,6 +28,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>饿了么</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>YES</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
