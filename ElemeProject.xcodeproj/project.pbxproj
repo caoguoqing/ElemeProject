@@ -53,6 +53,7 @@
 		1AE7A3311B2A7F9F00C84F92 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		1AE7A3331B2A7FD200C84F92 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		1AE7A3341B2A7FD200C84F92 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		1AE7A3361B2A89D600C84F92 /* ColorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
 		66E8635FAD3A160AF915E238 /* libPods-ElemeProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElemeProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A557B26FE77A5C73D26BA076 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6297797F64637041CCD19F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		1A741D691B25B08100A08E23 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
+				1AE7A3361B2A89D600C84F92 /* ColorMacro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";

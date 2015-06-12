@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Sam Lau. All rights reserved.
 //
 
+#import "ColorMacro.h"
 #import "AppDelegate.h"
 #import "WaiMaiViewController.h"
 #import "OrderViewController.h"
@@ -29,7 +30,10 @@
     [self.window makeKeyAndVisible];
     
     self.window.rootViewController = [self rootViewController];
-
+    
+    // customize navigation bar
+    [UINavigationBar appearance].barTintColor = THEME_COLOR;
+    
     return YES;
 }
 
