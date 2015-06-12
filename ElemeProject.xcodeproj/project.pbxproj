@@ -13,6 +13,11 @@
 		1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5CE1B248D4500534DA1 /* stylesheet.cas */; };
 		1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.mm */; };
 		1AE7A3111B2A751E00C84F92 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7A3101B2A751E00C84F92 /* BaiduMapAPI.framework */; };
+		1AE7A3131B2A790800C84F92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7A3121B2A790800C84F92 /* CoreLocation.framework */; };
+		1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */; };
+		1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32E1B2A7F6600C84F92 /* OrderViewController.m */; };
+		1AE7A3321B2A7F9F00C84F92 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A3311B2A7F9F00C84F92 /* MeViewController.m */; };
+		1AE7A3351B2A7FD200C84F92 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A3341B2A7FD200C84F92 /* DiscoverViewController.m */; };
 		806025AFF022FEC304B829B9 /* libPods-ElemeProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E8635FAD3A160AF915E238 /* libPods-ElemeProjectTests.a */; };
 		BF156A6D0330E2AA6F4637BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A557B26FE77A5C73D26BA076 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -39,6 +44,15 @@
 		1A741D641B25A87500A08E23 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A741D651B25A87500A08E23 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		1AE7A3101B2A751E00C84F92 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
+		1AE7A3121B2A790800C84F92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1AE7A32A1B2A7EF300C84F92 /* WaiMaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaiMaiViewController.h; sourceTree = "<group>"; };
+		1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaiMaiViewController.m; sourceTree = "<group>"; };
+		1AE7A32D1B2A7F6600C84F92 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		1AE7A32E1B2A7F6600C84F92 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		1AE7A3301B2A7F9F00C84F92 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		1AE7A3311B2A7F9F00C84F92 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		1AE7A3331B2A7FD200C84F92 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		1AE7A3341B2A7FD200C84F92 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		66E8635FAD3A160AF915E238 /* libPods-ElemeProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElemeProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A557B26FE77A5C73D26BA076 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6297797F64637041CCD19F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE7A3131B2A790800C84F92 /* CoreLocation.framework in Frameworks */,
 				1AE7A3111B2A751E00C84F92 /* BaiduMapAPI.framework in Frameworks */,
 				BF156A6D0330E2AA6F4637BC /* libPods.a in Frameworks */,
 			);
@@ -171,6 +186,10 @@
 		1A741D6B1B25B08100A08E23 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				1AE7A3231B2A7EB900C84F92 /* Discover */,
+				1AE7A3241B2A7EB900C84F92 /* Me */,
+				1AE7A3251B2A7EB900C84F92 /* Order */,
+				1AE7A3261B2A7EB900C84F92 /* WaiMai */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -191,9 +210,46 @@
 			path = BaiduMap_IOSSDK_v2;
 			sourceTree = "<group>";
 		};
+		1AE7A3231B2A7EB900C84F92 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7A3331B2A7FD200C84F92 /* DiscoverViewController.h */,
+				1AE7A3341B2A7FD200C84F92 /* DiscoverViewController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		1AE7A3241B2A7EB900C84F92 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7A3301B2A7F9F00C84F92 /* MeViewController.h */,
+				1AE7A3311B2A7F9F00C84F92 /* MeViewController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		1AE7A3251B2A7EB900C84F92 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7A32D1B2A7F6600C84F92 /* OrderViewController.h */,
+				1AE7A32E1B2A7F6600C84F92 /* OrderViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		1AE7A3261B2A7EB900C84F92 /* WaiMai */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7A32A1B2A7EF300C84F92 /* WaiMaiViewController.h */,
+				1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */,
+			);
+			path = WaiMai;
+			sourceTree = "<group>";
+		};
 		205CB2D14EFF08B9DF62627F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AE7A3121B2A790800C84F92 /* CoreLocation.framework */,
 				A557B26FE77A5C73D26BA076 /* libPods.a */,
 				66E8635FAD3A160AF915E238 /* libPods-ElemeProjectTests.a */,
 			);
@@ -379,7 +435,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55A5AB1B24829700534DA1 /* main.m in Sources */,
+				1AE7A3351B2A7FD200C84F92 /* DiscoverViewController.m in Sources */,
 				1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */,
+				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
+				1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */,
+				1AE7A3321B2A7F9F00C84F92 /* MeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
