@@ -12,7 +12,6 @@
 		1A55A5C51B24829700534DA1 /* ElemeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */; };
 		1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5CE1B248D4500534DA1 /* stylesheet.cas */; };
 		1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.mm */; };
-		1AE7A3111B2A751E00C84F92 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7A3101B2A751E00C84F92 /* BaiduMapAPI.framework */; };
 		1AE7A3131B2A790800C84F92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7A3121B2A790800C84F92 /* CoreLocation.framework */; };
 		1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */; };
 		1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32E1B2A7F6600C84F92 /* OrderViewController.m */; };
@@ -43,7 +42,6 @@
 		1A55A5CE1B248D4500534DA1 /* stylesheet.cas */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stylesheet.cas; sourceTree = "<group>"; };
 		1A741D641B25A87500A08E23 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A741D651B25A87500A08E23 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		1AE7A3101B2A751E00C84F92 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
 		1AE7A3121B2A790800C84F92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1AE7A32A1B2A7EF300C84F92 /* WaiMaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaiMaiViewController.h; sourceTree = "<group>"; };
 		1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaiMaiViewController.m; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE7A3131B2A790800C84F92 /* CoreLocation.framework in Frameworks */,
-				1AE7A3111B2A751E00C84F92 /* BaiduMapAPI.framework in Frameworks */,
 				BF156A6D0330E2AA6F4637BC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,17 +196,8 @@
 		1A741D6C1B25B08100A08E23 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				1AE7A30F1B2A751E00C84F92 /* BaiduMap_IOSSDK_v2 */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		1AE7A30F1B2A751E00C84F92 /* BaiduMap_IOSSDK_v2 */ = {
-			isa = PBXGroup;
-			children = (
-				1AE7A3101B2A751E00C84F92 /* BaiduMapAPI.framework */,
-			);
-			path = BaiduMap_IOSSDK_v2;
 			sourceTree = "<group>";
 		};
 		1AE7A3231B2A7EB900C84F92 /* Discover */ = {
