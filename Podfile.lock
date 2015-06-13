@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AMapSearch (2.4.1)
   - Classy (0.2.4)
   - ClassyLiveLayout (0.6.0):
     - Classy
@@ -42,6 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.1)
+  - AMapSearch (~> 2.4.1)
   - Classy (~> 0.2.4)
   - ClassyLiveLayout (~> 0.6.0)
   - Kiwi (~> 2.3.1)
@@ -53,6 +55,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
+  AMapSearch: 1c6a5b217e808a82369070366b323c09e2eb06c5
   Classy: 8c8f835d51e20d25e9cce0d864fba5bf1cef6070
   ClassyLiveLayout: 264876c3a64dcc732e174796bdeaa40a6b7fff3b
   Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7

@@ -6,6 +6,7 @@ pod 'ReactiveViewModel', '~> 0.3'
 pod 'Masonry', '~> 0.6.1'
 pod 'Classy', '~> 0.2.4'
 pod 'ClassyLiveLayout', '~> 0.6.0'
+pod 'AMapSearch', '~> 2.4.1'
 
 target :ElemeProjectTests, :exclusive => true do
       pod 'Kiwi', '~> 2.3.1'
