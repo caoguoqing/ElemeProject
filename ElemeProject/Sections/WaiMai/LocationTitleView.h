@@ -10,4 +10,8 @@
 
 @interface LocationTitleView : SHPAbstractView
 
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UIImageView *downwardDirectionImageView;
+@property (strong, nonatomic) UILabel *locationLabel;
+
 @end

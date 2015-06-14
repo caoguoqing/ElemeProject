@@ -82,7 +82,7 @@ static NSString* const kAMAP_API_KEY = @"abf0b40fdb4377ef5a7e4eaf6d6f7427";
 {
     AMapAddressComponent* addressComponent = response.regeocode.addressComponent;
     if (addressComponent) {
-        self.address = [NSString stringWithFormat:@"%@%@%@附近", addressComponent.district, addressComponent.neighborhood, addressComponent.building];
+        self.address = [NSString stringWithFormat:@"%@%@%@%@附近", addressComponent.district, addressComponent.township, addressComponent.neighborhood, addressComponent.building];
     }
 }
 
