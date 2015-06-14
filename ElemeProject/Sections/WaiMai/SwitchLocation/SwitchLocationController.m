@@ -21,6 +21,16 @@
     // setup title
     self.title = @"切换位置";
     
+    // add left bar button item to navigation bar
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cancel"] style:UIBarButtonItemStyleBordered target:self action:@selector(cancelBarButtonPressed:)];
+    leftBarButtonItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+}
+
+#pragma mark - Respond to action
+- (void)cancelBarButtonPressed:(UIBarButtonItem *)barButtonItem
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

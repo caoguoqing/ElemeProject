@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // setup title
+    self.title = @"我的";
 }
 
 @end
