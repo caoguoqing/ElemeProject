@@ -14,6 +14,7 @@
 		1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.mm */; };
 		1AC1CD551B2C1F2100AECA4B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1CD541B2C1F2100AECA4B /* LocationManager.m */; };
 		1AD107E11B2D5E3B006817BD /* LocationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD107E01B2D5E3B006817BD /* LocationTitleView.m */; };
+		1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD107E41B2DB87C006817BD /* SwitchLocationController.m */; };
 		1AE7A3131B2A790800C84F92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7A3121B2A790800C84F92 /* CoreLocation.framework */; };
 		1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */; };
 		1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32E1B2A7F6600C84F92 /* OrderViewController.m */; };
@@ -48,6 +49,8 @@
 		1AC1CD541B2C1F2100AECA4B /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		1AD107DF1B2D5E3B006817BD /* LocationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTitleView.h; sourceTree = "<group>"; };
 		1AD107E01B2D5E3B006817BD /* LocationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTitleView.m; sourceTree = "<group>"; };
+		1AD107E31B2DB87C006817BD /* SwitchLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchLocationController.h; sourceTree = "<group>"; };
+		1AD107E41B2DB87C006817BD /* SwitchLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchLocationController.m; sourceTree = "<group>"; };
 		1AE7A3121B2A790800C84F92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1AE7A32A1B2A7EF300C84F92 /* WaiMaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaiMaiViewController.h; sourceTree = "<group>"; };
 		1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaiMaiViewController.m; sourceTree = "<group>"; };
@@ -216,6 +219,15 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		1AD107E21B2DB838006817BD /* SwitchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				1AD107E31B2DB87C006817BD /* SwitchLocationController.h */,
+				1AD107E41B2DB87C006817BD /* SwitchLocationController.m */,
+			);
+			path = SwitchLocation;
+			sourceTree = "<group>";
+		};
 		1AE7A3231B2A7EB900C84F92 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +258,7 @@
 		1AE7A3261B2A7EB900C84F92 /* WaiMai */ = {
 			isa = PBXGroup;
 			children = (
+				1AD107E21B2DB838006817BD /* SwitchLocation */,
 				1AD107DF1B2D5E3B006817BD /* LocationTitleView.h */,
 				1AD107E01B2D5E3B006817BD /* LocationTitleView.m */,
 				1AE7A32A1B2A7EF300C84F92 /* WaiMaiViewController.h */,
@@ -447,6 +460,7 @@
 				1AE7A3351B2A7FD200C84F92 /* DiscoverViewController.m in Sources */,
 				1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */,
 				1AD107E11B2D5E3B006817BD /* LocationTitleView.m in Sources */,
+				1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */,
 				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
 				1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */,
 				1AE7A3321B2A7F9F00C84F92 /* MeViewController.m in Sources */,

@@ -42,6 +42,7 @@ RAC(self.label,text) = RACObserve(self.viewModel,dateAdded);
 * 初始化项目
 * iOS架构
 * API设计
+* 高质量代码
 * 编码规范
 * iOS开源库
 * 自动化构建

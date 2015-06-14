@@ -9,6 +9,7 @@
 #import "WaiMaiViewController.h"
 #import "LocationManager.h"
 #import "LocationTitleView.h"
+#import "SwitchLocationController.h"
 #import <ReactiveCocoa.h>
 
 @interface WaiMaiViewController ()
@@ -25,11 +26,25 @@
     // create LocationTitle View
     self.locationTitleView = [[LocationTitleView alloc] initWithFrame:CGRectMake(0, 0, 250, 32)];
     self.navigationItem.titleView = self.locationTitleView;
+
     // observer address and update location title view
     [[LocationManager shareInstance] findCurrentLocation];
     [RACObserve([LocationManager shareInstance], address) subscribeNext:^(NSString* address) {
         self.locationTitleView.locationLabel.text = address;
     }];
+
+    //  handle when touch location title view
+    UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.navigationItem.titleView addGestureRecognizer:tapGestureRecognizer];
+}
+
+- (void)handleTapGesture:(UITapGestureRecognizer*)gesture
+{
+    SwitchLocationController *destViewController = [[SwitchLocationController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:destViewController];
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end
