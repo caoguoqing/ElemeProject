@@ -7,6 +7,8 @@
 //
 
 #import "WaiMaiViewController.h"
+#import "LocationManager.h"
+#import <ReactiveCocoa.h>
 
 @interface WaiMaiViewController ()
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[LocationManager shareInstance] findCurrentLocation];
+    [RACObserve([LocationManager shareInstance], address) subscribeNext:^(NSString *x) {
+        NSLog(@"address = %@", x);
+    }];
 }
 
 @end

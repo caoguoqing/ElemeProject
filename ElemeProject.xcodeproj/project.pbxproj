@@ -12,6 +12,7 @@
 		1A55A5C51B24829700534DA1 /* ElemeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */; };
 		1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5CE1B248D4500534DA1 /* stylesheet.cas */; };
 		1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.mm */; };
+		1AC1CD551B2C1F2100AECA4B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1CD541B2C1F2100AECA4B /* LocationManager.m */; };
 		1AE7A3131B2A790800C84F92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7A3121B2A790800C84F92 /* CoreLocation.framework */; };
 		1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */; };
 		1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7A32E1B2A7F6600C84F92 /* OrderViewController.m */; };
@@ -42,6 +43,8 @@
 		1A55A5CE1B248D4500534DA1 /* stylesheet.cas */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stylesheet.cas; sourceTree = "<group>"; };
 		1A741D641B25A87500A08E23 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A741D651B25A87500A08E23 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		1AC1CD531B2C1F2100AECA4B /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		1AC1CD541B2C1F2100AECA4B /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		1AE7A3121B2A790800C84F92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1AE7A32A1B2A7EF300C84F92 /* WaiMaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaiMaiViewController.h; sourceTree = "<group>"; };
 		1AE7A32B1B2A7EF300C84F92 /* WaiMaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaiMaiViewController.m; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 		1A741D671B25B08100A08E23 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				1AC1CD521B2C1F0700AECA4B /* Map */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -198,6 +202,15 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		1AC1CD521B2C1F0700AECA4B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1AC1CD531B2C1F2100AECA4B /* LocationManager.h */,
+				1AC1CD541B2C1F2100AECA4B /* LocationManager.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		1AE7A3231B2A7EB900C84F92 /* Discover */ = {
@@ -425,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55A5AB1B24829700534DA1 /* main.m in Sources */,
+				1AC1CD551B2C1F2100AECA4B /* LocationManager.m in Sources */,
 				1AE7A3351B2A7FD200C84F92 /* DiscoverViewController.m in Sources */,
 				1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */,
 				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
