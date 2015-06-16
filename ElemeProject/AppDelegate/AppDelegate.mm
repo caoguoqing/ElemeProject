@@ -22,7 +22,7 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     // increase launch image time
-    sleep(3);
+    sleep(1);
 
     // iniitalize and setup window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

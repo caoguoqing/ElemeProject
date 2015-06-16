@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SwitchLocationController : UIViewController
+@interface SwitchLocationController : UITableViewController
 
 @end
