@@ -7,6 +7,7 @@
 //
 
 #import "SwitchLocationController.h"
+#import "UIImage+Helper.h"
 #import "ColorMacro.h"
 #import "ColorMacro.h"
 
@@ -28,10 +29,11 @@
 
     // Initialize search display view controller
     UISearchBar* searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
-    searchBar.barTintColor = THEME_COLOR;
     [searchBar sizeToFit];
+    [searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
+    searchBar.placeholder = @"请输入要切换的地址";
     searchBar.delegate = self;
-    
+
     self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     self.searchController.delegate = self;
     self.searchController.searchResultsDelegate = self;
@@ -58,9 +60,10 @@
 #pragma mark - UISearchBarDelegate
 
 #pragma mark - UISearchDisplayDelegate
-- (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView
+
+- (void)searchDisplayController:(UISearchDisplayController*)controller willShowSearchResultsTableView:(UITableView*)tableView
 {
-    static NSString *searchLocationCellIdentifier = @"searchLocationCell";
+    static NSString* searchLocationCellIdentifier = @"searchLocationCell";
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:searchLocationCellIdentifier];
 }
 
