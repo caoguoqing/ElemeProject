@@ -12,6 +12,7 @@
 		1A55A5C51B24829700534DA1 /* ElemeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */; };
 		1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5CE1B248D4500534DA1 /* stylesheet.cas */; };
 		1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.mm */; };
+		1AB825101B3040F400C70525 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8250F1B3040F400C70525 /* ArrayDataSource.m */; };
 		1AC1CD551B2C1F2100AECA4B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1CD541B2C1F2100AECA4B /* LocationManager.m */; };
 		1AD107E11B2D5E3B006817BD /* LocationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD107E01B2D5E3B006817BD /* LocationTitleView.m */; };
 		1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD107E41B2DB87C006817BD /* SwitchLocationController.m */; };
@@ -46,6 +47,8 @@
 		1A55A5CE1B248D4500534DA1 /* stylesheet.cas */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stylesheet.cas; sourceTree = "<group>"; };
 		1A741D641B25A87500A08E23 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A741D651B25A87500A08E23 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		1AB8250E1B3040F400C70525 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		1AB8250F1B3040F400C70525 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
 		1AC1CD531B2C1F2100AECA4B /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		1AC1CD541B2C1F2100AECA4B /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		1AD107DF1B2D5E3B006817BD /* LocationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTitleView.h; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 		1A741D671B25B08100A08E23 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				1AB8250D1B3040F400C70525 /* DataSources */,
 				1AD107EB1B301395006817BD /* Categories */,
 				1AC1CD521B2C1F0700AECA4B /* Map */,
 			);
@@ -212,6 +216,15 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		1AB8250D1B3040F400C70525 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				1AB8250E1B3040F400C70525 /* ArrayDataSource.h */,
+				1AB8250F1B3040F400C70525 /* ArrayDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		1AC1CD521B2C1F0700AECA4B /* Map */ = {
@@ -475,6 +488,7 @@
 				1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */,
 				1AD107E11B2D5E3B006817BD /* LocationTitleView.m in Sources */,
 				1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */,
+				1AB825101B3040F400C70525 /* ArrayDataSource.m in Sources */,
 				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
 				1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */,
 				1AE7A3321B2A7F9F00C84F92 /* MeViewController.m in Sources */,
