@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef void (^TableViewCellConfigureBlock)(id cell, id item);
 
-@interface ArraySectionDataSource : NSObject
+@interface ArraySectionDataSource : NSObject <UITableViewDataSource>
 
+- (id)initWithItems:(NSArray*)items
+    cellIdentifiers:(NSArray*)cellIdentifiers
+configureCellBlocks:(NSArray*)configureCellBlocks;
 
-- (id)initWithItems:(NSArray *)items
-     cellIdentifiers:(NSArray *)cellIdentifiers
- configureCellBlocks:(NSArray *)configureCellBlocks;
-
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+- (id)itemAtIndexPath:(NSIndexPath*)indexPath;
 
 @end

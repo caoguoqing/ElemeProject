@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A22AAC31B311D3800B8F6AE /* CurrentLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */; };
+		1A22AAC41B311D3800B8F6AE /* EnableAutoLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AAC21B311D3800B8F6AE /* EnableAutoLocationCell.m */; };
 		1A55A5AB1B24829700534DA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5AA1B24829700534DA1 /* main.m */; };
 		1A55A5B61B24829700534DA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5B51B24829700534DA1 /* Images.xcassets */; };
 		1A55A5C51B24829700534DA1 /* ElemeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A22AABF1B311D3800B8F6AE /* CurrentLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationCell.h; sourceTree = "<group>"; };
+		1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationCell.m; sourceTree = "<group>"; };
+		1A22AAC11B311D3800B8F6AE /* EnableAutoLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnableAutoLocationCell.h; sourceTree = "<group>"; };
+		1A22AAC21B311D3800B8F6AE /* EnableAutoLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnableAutoLocationCell.m; sourceTree = "<group>"; };
 		1A55A5A51B24829700534DA1 /* ElemeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElemeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55A5A91B24829700534DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A55A5AA1B24829700534DA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A22AABE1B311D3800B8F6AE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A22AABF1B311D3800B8F6AE /* CurrentLocationCell.h */,
+				1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */,
+				1A22AAC11B311D3800B8F6AE /* EnableAutoLocationCell.h */,
+				1A22AAC21B311D3800B8F6AE /* EnableAutoLocationCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1A55A59C1B24829600534DA1 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +194,7 @@
 		1A741D671B25B08100A08E23 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				1A22AABE1B311D3800B8F6AE /* Cells */,
 				1AB8250D1B3040F400C70525 /* DataSources */,
 				1AD107EB1B301395006817BD /* Categories */,
 				1AC1CD521B2C1F0700AECA4B /* Map */,
@@ -491,6 +509,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A22AAC41B311D3800B8F6AE /* EnableAutoLocationCell.m in Sources */,
+				1A22AAC31B311D3800B8F6AE /* CurrentLocationCell.m in Sources */,
 				1A55A5AB1B24829700534DA1 /* main.m in Sources */,
 				1AC1CD551B2C1F2100AECA4B /* LocationManager.m in Sources */,
 				1AE7A3351B2A7FD200C84F92 /* DiscoverViewController.m in Sources */,

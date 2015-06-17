@@ -7,9 +7,8 @@
 //
 
 #import "ArraySectionDataSource.h"
-#import <UIKit/UIKit.h>
 
-@interface ArraySectionDataSource () <UITableViewDataSource>
+@interface ArraySectionDataSource () 
 
 @property (strong, nonatomic) NSArray* items;
 @property (strong, nonatomic) NSArray* cellIdentifiers;
@@ -37,6 +36,10 @@ configureCellBlocks:(NSArray*)configureCellBlocks
 }
 
 #pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.items.count;
+}
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -53,7 +56,9 @@ configureCellBlocks:(NSArray*)configureCellBlocks
     id item = [self itemAtIndexPath:indexPath];
     
     TableViewCellConfigureBlock configureBlock = self.configureCellBlocks[indexPath.section];
-    configureBlock(cell, item);
+    if (configureBlock) {
+        configureBlock(cell, item);
+    }
 
     return cell;
 }

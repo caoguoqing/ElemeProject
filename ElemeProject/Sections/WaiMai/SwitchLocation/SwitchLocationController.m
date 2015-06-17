@@ -10,16 +10,20 @@
 #import "UIImage+Helper.h"
 #import "ColorMacro.h"
 #import "ColorMacro.h"
-#import "ArrayDataSource.h"
-
+#import "SwitchLocationDataSource.h"
+#import "CurrentLocationCell.h"
+#import "EnableAutoLocationCell.h"
 
 // Define constants
-static NSString *const kSearchHistoryCell = @"searchHistoryCell";
+static NSString* const kCurrentLocationCell = @"currentLocationCell";
+static NSString* const kSearchHistoryCell = @"searchHistoryCell";
+static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 
-@interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate>
 
 @property (strong, nonatomic) UISearchDisplayController* searchController;
 @property (strong, nonatomic) NSArray* searchHistory;
+@property (strong, nonatomic) SwitchLocationDataSource* dataSource;
 
 @end
 
@@ -39,6 +43,7 @@ static NSString *const kSearchHistoryCell = @"searchHistoryCell";
     [searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
     searchBar.placeholder = @"请输入要切换的地址";
     searchBar.delegate = self;
+    searchBar.backgroundImage = [UIImage imageWithColor:THEME_COLOR];
 
     self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     self.searchController.delegate = self;
@@ -47,10 +52,10 @@ static NSString *const kSearchHistoryCell = @"searchHistoryCell";
 
     // setup table view header
     self.tableView.tableHeaderView = self.searchController.searchBar;
-
+    
     // setup title and background color
     self.title = @"切换位置";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = BACKGROUND_COLOR;
 
     // add left bar button item to navigation bar
     UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cancel"] style:UIBarButtonItemStyleBordered target:self action:@selector(cancelBarButtonPressed:)];
@@ -63,14 +68,39 @@ static NSString *const kSearchHistoryCell = @"searchHistoryCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    // setup table view
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // Create data source and setup
-    ArrayDataSource *dataSource = [[ArrayDataSource alloc] initWithItems:self.searchHistory cellIdentifier: kSearchHistoryCell configureCellBlock:^(id cell, id item) {
+    TableViewCellConfigureBlock block = ^(id cell, id item) {
 
-    }];
-    self.tableView.dataSource = dataSource;
+    };
+
+    self.dataSource = [[SwitchLocationDataSource alloc]
+              initWithItems:@[ @[ @"sectionOne" ], @[], @[ @"sectionThree" ] ]
+            cellIdentifiers:@[ kCurrentLocationCell, kSearchHistoryCell, kEnableAutoLocationCell ]
+        configureCellBlocks:@[ block, block, block ]];
+    self.tableView.dataSource = self.dataSource;
+    [self.tableView registerClass:[CurrentLocationCell class] forCellReuseIdentifier:kCurrentLocationCell];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kSearchHistoryCell];
+    [self.tableView registerClass:[EnableAutoLocationCell class] forCellReuseIdentifier:kEnableAutoLocationCell];
 }
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 15.0;
+    }else {
+        return 7.5;
+    }
+}
+
 
 #pragma mark - UISearchBarDelegate
 
