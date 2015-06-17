@@ -10,10 +10,16 @@
 #import "UIImage+Helper.h"
 #import "ColorMacro.h"
 #import "ColorMacro.h"
+#import "ArrayDataSource.h"
+
+
+// Define constants
+static NSString *const kSearchHistoryCell = @"searchHistoryCell";
 
 @interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (strong, nonatomic) UISearchDisplayController* searchController;
+@property (strong, nonatomic) NSArray* searchHistory;
 
 @end
 
@@ -39,22 +45,31 @@
     self.searchController.searchResultsDelegate = self;
     self.searchController.searchResultsDataSource = self;
 
+    // setup table view header
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+
+    // setup title and background color
+    self.title = @"切换位置";
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    // add left bar button item to navigation bar
+    UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cancel"] style:UIBarButtonItemStyleBordered target:self action:@selector(cancelBarButtonPressed:)];
+    leftBarButtonItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // setup title
-    self.title = @"切换位置";
-    self.view.backgroundColor = [UIColor whiteColor];
-    // setup table view header
-    self.tableView.tableHeaderView = self.searchController.searchBar;
 
-    // add left bar button item to navigation bar
-    UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cancel"] style:UIBarButtonItemStyleBordered target:self action:@selector(cancelBarButtonPressed:)];
-    leftBarButtonItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    // Create data source and setup
+    ArrayDataSource *dataSource = [[ArrayDataSource alloc] initWithItems:self.searchHistory cellIdentifier: kSearchHistoryCell configureCellBlock:^(id cell, id item) {
+
+    }];
+    self.tableView.dataSource = dataSource;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kSearchHistoryCell];
 }
 
 #pragma mark - UISearchBarDelegate

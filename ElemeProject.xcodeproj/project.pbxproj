@@ -13,6 +13,8 @@
 		1A55A5CF1B248D4500534DA1 /* stylesheet.cas in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5CE1B248D4500534DA1 /* stylesheet.cas */; };
 		1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A741D651B25A87500A08E23 /* AppDelegate.mm */; };
 		1AB825101B3040F400C70525 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8250F1B3040F400C70525 /* ArrayDataSource.m */; };
+		1AB8251D1B31066400C70525 /* ArraySectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8251C1B31066400C70525 /* ArraySectionDataSource.m */; };
+		1AB825201B310D5600C70525 /* SwitchLocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8251F1B310D5600C70525 /* SwitchLocationDataSource.m */; };
 		1AC1CD551B2C1F2100AECA4B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1CD541B2C1F2100AECA4B /* LocationManager.m */; };
 		1AD107E11B2D5E3B006817BD /* LocationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD107E01B2D5E3B006817BD /* LocationTitleView.m */; };
 		1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD107E41B2DB87C006817BD /* SwitchLocationController.m */; };
@@ -49,6 +51,10 @@
 		1A741D651B25A87500A08E23 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		1AB8250E1B3040F400C70525 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
 		1AB8250F1B3040F400C70525 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
+		1AB8251B1B31066400C70525 /* ArraySectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArraySectionDataSource.h; sourceTree = "<group>"; };
+		1AB8251C1B31066400C70525 /* ArraySectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArraySectionDataSource.m; sourceTree = "<group>"; };
+		1AB8251E1B310D5600C70525 /* SwitchLocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchLocationDataSource.h; sourceTree = "<group>"; };
+		1AB8251F1B310D5600C70525 /* SwitchLocationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchLocationDataSource.m; sourceTree = "<group>"; };
 		1AC1CD531B2C1F2100AECA4B /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		1AC1CD541B2C1F2100AECA4B /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		1AD107DF1B2D5E3B006817BD /* LocationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTitleView.h; sourceTree = "<group>"; };
@@ -221,6 +227,10 @@
 		1AB8250D1B3040F400C70525 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				1AB8251E1B310D5600C70525 /* SwitchLocationDataSource.h */,
+				1AB8251F1B310D5600C70525 /* SwitchLocationDataSource.m */,
+				1AB8251B1B31066400C70525 /* ArraySectionDataSource.h */,
+				1AB8251C1B31066400C70525 /* ArraySectionDataSource.m */,
 				1AB8250E1B3040F400C70525 /* ArrayDataSource.h */,
 				1AB8250F1B3040F400C70525 /* ArrayDataSource.m */,
 			);
@@ -488,6 +498,8 @@
 				1A741D661B25A87500A08E23 /* AppDelegate.mm in Sources */,
 				1AD107E11B2D5E3B006817BD /* LocationTitleView.m in Sources */,
 				1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */,
+				1AB8251D1B31066400C70525 /* ArraySectionDataSource.m in Sources */,
+				1AB825201B310D5600C70525 /* SwitchLocationDataSource.m in Sources */,
 				1AB825101B3040F400C70525 /* ArrayDataSource.m in Sources */,
 				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
 				1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */,
