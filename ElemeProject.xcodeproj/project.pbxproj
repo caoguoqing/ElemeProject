@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A22AAC31B311D3800B8F6AE /* CurrentLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */; };
 		1A22AAC41B311D3800B8F6AE /* EnableAutoLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AAC21B311D3800B8F6AE /* EnableAutoLocationCell.m */; };
+		1A22AC1D1B33C3AC00B8F6AE /* NSString+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AC1C1B33C3AC00B8F6AE /* NSString+Sandbox.m */; };
 		1A55A5AB1B24829700534DA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5AA1B24829700534DA1 /* main.m */; };
 		1A55A5B61B24829700534DA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A55A5B51B24829700534DA1 /* Images.xcassets */; };
 		1A55A5C51B24829700534DA1 /* ElemeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A55A5C41B24829700534DA1 /* ElemeProjectTests.m */; };
@@ -45,6 +46,8 @@
 		1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationCell.m; sourceTree = "<group>"; };
 		1A22AAC11B311D3800B8F6AE /* EnableAutoLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnableAutoLocationCell.h; sourceTree = "<group>"; };
 		1A22AAC21B311D3800B8F6AE /* EnableAutoLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnableAutoLocationCell.m; sourceTree = "<group>"; };
+		1A22AC1B1B33C3AC00B8F6AE /* NSString+Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sandbox.h"; sourceTree = "<group>"; };
+		1A22AC1C1B33C3AC00B8F6AE /* NSString+Sandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sandbox.m"; sourceTree = "<group>"; };
 		1A55A5A51B24829700534DA1 /* ElemeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElemeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55A5A91B24829700534DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A55A5AA1B24829700534DA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 		1AD107EB1B301395006817BD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1A22AC1B1B33C3AC00B8F6AE /* NSString+Sandbox.h */,
+				1A22AC1C1B33C3AC00B8F6AE /* NSString+Sandbox.m */,
 				1AD107EC1B3013DA006817BD /* UIImage+Helper.h */,
 				1AD107ED1B3013DA006817BD /* UIImage+Helper.m */,
 			);
@@ -524,6 +529,7 @@
 				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
 				1AE7A32F1B2A7F6600C84F92 /* OrderViewController.m in Sources */,
 				1AE7A3321B2A7F9F00C84F92 /* MeViewController.m in Sources */,
+				1A22AC1D1B33C3AC00B8F6AE /* NSString+Sandbox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

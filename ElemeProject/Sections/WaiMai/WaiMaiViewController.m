@@ -40,13 +40,12 @@
     [self.navigationItem.titleView addGestureRecognizer:tapGestureRecognizer];
 }
 
-
 #pragma mark - Events Response
 - (void)handleTapGesture:(UITapGestureRecognizer*)gesture
 {
-    SwitchLocationController *destViewController = [[SwitchLocationController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:destViewController];
-    
+    SwitchLocationController* destViewController = [[SwitchLocationController alloc] init];
+    UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:destViewController];
+
     [self presentViewController:navigationController animated:YES completion:nil];
 }
 
