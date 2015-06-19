@@ -44,7 +44,10 @@
     return NSTemporaryDirectory();
 }
 
-#pragma mark - Extending directories
-
+#pragma mark - File paths
++ (NSString*)filePathAppendDocumentDirectory:(NSString *)filename
+{
+    return [[self documentDirectory] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", filename]];
+}
 
 @end

@@ -18,4 +18,7 @@
 + (NSString*)cacheDirectory;
 + (NSString*)tmpDirecotory;
 
+// File paths
++ (NSString*)filePathAppendDocumentDirectory:(NSString*)filename;
+
 @end
