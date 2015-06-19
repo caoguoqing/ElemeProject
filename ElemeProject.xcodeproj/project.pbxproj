@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2008CC1B3445DE006BBACB /* LocationHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2008CB1B3445DE006BBACB /* LocationHistory.m */; };
+		1A2008CF1B344952006BBACB /* LocationHistorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2008CE1B344952006BBACB /* LocationHistorySpec.m */; };
 		1A22AAC31B311D3800B8F6AE /* CurrentLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */; };
 		1A22AAC41B311D3800B8F6AE /* EnableAutoLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AAC21B311D3800B8F6AE /* EnableAutoLocationCell.m */; };
 		1A22AC1D1B33C3AC00B8F6AE /* NSString+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A22AC1C1B33C3AC00B8F6AE /* NSString+Sandbox.m */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A2008CA1B3445DE006BBACB /* LocationHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHistory.h; sourceTree = "<group>"; };
+		1A2008CB1B3445DE006BBACB /* LocationHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHistory.m; sourceTree = "<group>"; };
+		1A2008CE1B344952006BBACB /* LocationHistorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHistorySpec.m; sourceTree = "<group>"; };
 		1A22AABF1B311D3800B8F6AE /* CurrentLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationCell.h; sourceTree = "<group>"; };
 		1A22AAC01B311D3800B8F6AE /* CurrentLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationCell.m; sourceTree = "<group>"; };
 		1A22AAC11B311D3800B8F6AE /* EnableAutoLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnableAutoLocationCell.h; sourceTree = "<group>"; };
@@ -114,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2008C91B3445C5006BBACB /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				1A2008CA1B3445DE006BBACB /* LocationHistory.h */,
+				1A2008CB1B3445DE006BBACB /* LocationHistory.m */,
+			);
+			path = PropertyLists;
+			sourceTree = "<group>";
+		};
+		1A2008CD1B34490E006BBACB /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				1A2008CE1B344952006BBACB /* LocationHistorySpec.m */,
+			);
+			path = PropertyLists;
+			sourceTree = "<group>";
+		};
 		1A22AABE1B311D3800B8F6AE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +150,7 @@
 		1A22AC241B33FE5600B8F6AE /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				1A2008C91B3445C5006BBACB /* PropertyLists */,
 				1A22AC251B33FE5600B8F6AE /* UserPreferences */,
 			);
 			path = Persistence;
@@ -145,6 +168,7 @@
 		1A22AC291B33FEEE00B8F6AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1A2008CD1B34490E006BBACB /* PropertyLists */,
 				1A22AC2A1B33FEEE00B8F6AE /* Persistence */,
 			);
 			path = Helpers;
@@ -610,6 +634,7 @@
 				1AD107E51B2DB87C006817BD /* SwitchLocationController.m in Sources */,
 				1A22AC281B33FE6C00B8F6AE /* UserPreferences.m in Sources */,
 				1AB8251D1B31066400C70525 /* ArraySectionDataSource.m in Sources */,
+				1A2008CC1B3445DE006BBACB /* LocationHistory.m in Sources */,
 				1AB825201B310D5600C70525 /* SwitchLocationDataSource.m in Sources */,
 				1AB825101B3040F400C70525 /* ArrayDataSource.m in Sources */,
 				1AE7A32C1B2A7EF300C84F92 /* WaiMaiViewController.m in Sources */,
@@ -623,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2008CF1B344952006BBACB /* LocationHistorySpec.m in Sources */,
 				1A22AC2D1B33FF0C00B8F6AE /* UserPreferencesSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

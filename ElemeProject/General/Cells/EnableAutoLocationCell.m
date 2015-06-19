@@ -33,12 +33,12 @@
 - (void)defineLayout
 {
     [self.enableCurrentLocationLabel mas_remakeConstraints:^(MASConstraintMaker* make) {
-        make.left.equalTo(self).with.offset(20);
+        make.left.equalTo(self).with.offset(15);
         make.centerY.equalTo(self);
     }];
 
     [self.enableLocationSwitch mas_makeConstraints:^(MASConstraintMaker* make) {
-        make.right.equalTo(self).with.offset(-20);
+        make.right.equalTo(self).with.offset(-15);
         make.centerY.equalTo(self);
     }];
 }

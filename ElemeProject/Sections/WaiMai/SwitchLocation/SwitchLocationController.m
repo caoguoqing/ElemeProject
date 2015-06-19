@@ -13,6 +13,9 @@
 #import "SwitchLocationDataSource.h"
 #import "CurrentLocationCell.h"
 #import "EnableAutoLocationCell.h"
+#import "LocationHistory.h"
+#import "LocationManager.h"
+#import <ReactiveCocoa.h>
 
 // Define constants
 static NSString* const kCurrentLocationCell = @"currentLocationCell";
@@ -24,6 +27,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 @property (strong, nonatomic) UISearchDisplayController* searchController;
 @property (strong, nonatomic) NSArray* searchHistory;
 @property (strong, nonatomic) SwitchLocationDataSource* dataSource;
+@property (strong, nonatomic) NSMutableArray* locationHistoryItems;
 
 @end
 
@@ -61,25 +65,34 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cancel"] style:UIBarButtonItemStyleBordered target:self action:@selector(cancelBarButtonPressed:)];
     leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
-    
+
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // load data from plist and reload table view
+    self.locationHistoryItems = [LocationHistory locationHistoryItems];
+    [RACObserve(self, locationHistoryItems) subscribeNext:^(id x) {
+        [self.tableView reloadData];
+    }];
+
     // setup table view
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     // Create data source and setup
-    TableViewCellConfigureBlock block = ^(id cell, id item) {
+    TableViewCellConfigureBlock placeholderBlock = ^(UITableViewCell* cell, NSString* address) {
 
+    };
+    TableViewCellConfigureBlock locationHistoryBlock = ^(UITableViewCell* cell, NSString* address) {
+        cell.textLabel.text = address;
     };
 
     self.dataSource = [[SwitchLocationDataSource alloc]
-              initWithItems:@[ @[ @"sectionOne" ], @[], @[ @"sectionThree" ] ]
+              initWithItems:@[ @[ @"sectionOne" ], self.locationHistoryItems, @[ @"sectionThree" ] ]
             cellIdentifiers:@[ kCurrentLocationCell, kSearchHistoryCell, kEnableAutoLocationCell ]
-        configureCellBlocks:@[ block, block, block ]];
+        configureCellBlocks:@[ placeholderBlock, locationHistoryBlock, placeholderBlock ]];
     self.tableView.dataSource = self.dataSource;
     [self.tableView registerClass:[CurrentLocationCell class] forCellReuseIdentifier:kCurrentLocationCell];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kSearchHistoryCell];
@@ -96,6 +109,18 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [[LocationManager shareInstance] findCurrentLocation];
+        [RACObserve([LocationManager shareInstance], address) subscribeNext:^(NSString* address) {
+            if (address) { // get the address successfully
+                [LocationHistory insertLocationItem:address];
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            else { // fail to get the address
+            }
+        }];
+    }
 }
 
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
