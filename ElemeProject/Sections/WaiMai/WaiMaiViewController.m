@@ -20,7 +20,7 @@
 
 @implementation WaiMaiViewController
 
-#pragma mark - View Lifecycle
+#pragma mark - Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,5 +48,6 @@
 
     [self presentViewController:navigationController animated:YES completion:nil];
 }
+
 
 @end

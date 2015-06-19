@@ -29,7 +29,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 
 @implementation SwitchLocationController
 
-#pragma mark - View lifecycle
+#pragma mark - Lifecycle
 - (instancetype)init
 {
     self = [super init];
@@ -52,7 +52,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 
     // setup table view header
     self.tableView.tableHeaderView = self.searchController.searchBar;
-    
+
     // setup title and background color
     self.title = @"切换位置";
     self.view.backgroundColor = BACKGROUND_COLOR;
@@ -70,7 +70,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     [super viewDidLoad];
     // setup table view
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+
     // Create data source and setup
     TableViewCellConfigureBlock block = ^(id cell, id item) {
 
@@ -86,21 +86,27 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     [self.tableView registerClass:[EnableAutoLocationCell class] forCellReuseIdentifier:kEnableAutoLocationCell];
 }
 
+#pragma mark - Event Response
+- (void)cancelBarButtonPressed:(UIBarButtonItem*)barButtonItem
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
         return 15.0;
-    }else {
+    }
+    else {
         return 7.5;
     }
 }
-
 
 #pragma mark - UISearchBarDelegate
 
@@ -110,12 +116,6 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 {
     static NSString* searchLocationCellIdentifier = @"searchLocationCell";
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:searchLocationCellIdentifier];
-}
-
-#pragma mark - Event Response
-- (void)cancelBarButtonPressed:(UIBarButtonItem*)barButtonItem
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
