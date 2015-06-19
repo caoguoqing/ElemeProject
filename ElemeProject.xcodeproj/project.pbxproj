@@ -166,6 +166,45 @@
 			path = UserPreferences;
 			sourceTree = "<group>";
 		};
+		1A22AC2E1B34068800B8F6AE /* General */ = {
+			isa = PBXGroup;
+			children = (
+				1A22AC2F1B34068800B8F6AE /* Categories */,
+				1A22AC301B34068800B8F6AE /* Cells */,
+				1A22AC311B34068800B8F6AE /* DataSources */,
+				1A22AC321B34068800B8F6AE /* Map */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		1A22AC2F1B34068800B8F6AE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1A22AC301B34068800B8F6AE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1A22AC311B34068800B8F6AE /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		1A22AC321B34068800B8F6AE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		1A55A59C1B24829600534DA1 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +254,7 @@
 		1A55A5C11B24829700534DA1 /* ElemeProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				1A22AC2E1B34068800B8F6AE /* General */,
 				1A22AC291B33FEEE00B8F6AE /* Helpers */,
 				1A55A5C21B24829700534DA1 /* Supporting Files */,
 			);

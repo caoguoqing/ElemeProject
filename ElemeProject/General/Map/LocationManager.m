@@ -76,6 +76,10 @@ static NSString* const kAMAP_API_KEY = @"abf0b40fdb4377ef5a7e4eaf6d6f7427";
         self.mapView.showsUserLocation = NO;
     }
 }
+- (void)mapView:(MAMapView*)mapView didFailToLocateUserWithError:(NSError*)error
+{
+    self.address = nil;
+}
 
 #pragma mark - AMapSearchDelegate
 - (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest*)request response:(AMapReGeocodeSearchResponse*)response

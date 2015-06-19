@@ -61,7 +61,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     UIBarButtonItem* leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cancel"] style:UIBarButtonItemStyleBordered target:self action:@selector(cancelBarButtonPressed:)];
     leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
-
+    
     return self;
 }
 

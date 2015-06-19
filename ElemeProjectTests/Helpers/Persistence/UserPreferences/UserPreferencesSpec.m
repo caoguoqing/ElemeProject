@@ -26,6 +26,28 @@ describe(@"UserPreferences", ^{
             [[theValue([UserPreferences isAutoLocation]) should] beNo];
         });
     });
+    
+    context(@"when save current address that is Guangzhou", ^{
+        it(@"should be Guangzhou", ^{
+            [UserPreferences saveCurrentAddress:@"Guangzhou"];
+            NSString *currentAddress = [UserPreferences getCurrentAddress];
+            [[currentAddress should] equal:@"Guangzhou"];
+        });
+    });
+    
+    context(@"when first launch", ^{
+        it(@"should be YES", ^{
+            [UserPreferences enableFirstLaunch];
+            [[theValue([UserPreferences isFirstLaunch]) should] beYes];
+        });
+    });
+    
+    context(@"when disable first launch", ^{
+        it(@"should be NO", ^{
+            [UserPreferences disableFirstLaunch];
+            [[theValue([UserPreferences isFirstLaunch]) should] beNo];
+        });
+    });
 });
 
 SPEC_END

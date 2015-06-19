@@ -12,6 +12,7 @@
 #import "OrderViewController.h"
 #import "DiscoverViewController.h"
 #import "MeViewController.h"
+#import "UserPreferences.h"
 
 @interface AppDelegate ()
 
@@ -24,18 +25,21 @@
     // increase launch image time
     sleep(1);
 
+    // when first launch
+    [self firstLaunch];
+
     // iniitalize and setup window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+
     self.window.rootViewController = [self rootViewController];
-    
+
     // customize navigation bar
     [UINavigationBar appearance].barTintColor = THEME_COLOR;
     [UINavigationBar appearance].translucent = NO;
-    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont systemFontOfSize:20]};
-    
+    [UINavigationBar appearance].titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName : [UIFont systemFontOfSize:20] };
+
     return YES;
 }
 
@@ -67,6 +71,14 @@
 }
 
 #pragma mark - Helper methods
+- (void)firstLaunch
+{
+    if ([UserPreferences isFirstLaunch]) {
+        [UserPreferences enableAutoLocation];
+        [UserPreferences disableFirstLaunch];
+    }
+}
+
 - (UITabBarController*)rootViewController
 {
     UITabBarController* tabBarController = [[UITabBarController alloc] init];
@@ -91,7 +103,7 @@
         [tabSubControllers addObject:navigationController];
     }];
     tabBarController.viewControllers = tabSubControllers;
-    
+
     return tabBarController;
 }
 

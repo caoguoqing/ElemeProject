@@ -8,6 +8,8 @@
 
 #import "EnableAutoLocationCell.h"
 #import <Masonry.h>
+#import <ReactiveCocoa.h>
+#import "UserPreferences.h"
 
 @implementation EnableAutoLocationCell
 
@@ -16,6 +18,16 @@
 {
     [self addSubview:self.enableCurrentLocationLabel];
     [self addSubview:self.enableLocationSwitch];
+
+    // when enableLocationSwitch change state
+    [self.enableLocationSwitch.rac_newOnChannel subscribeNext:^(id on) {
+        if ([on boolValue]) {
+            [UserPreferences enableAutoLocation];
+        }
+        else {
+            [UserPreferences disableAutoLocation];
+        }
+    }];
 }
 
 - (void)defineLayout
@@ -24,8 +36,8 @@
         make.left.equalTo(self).with.offset(20);
         make.centerY.equalTo(self);
     }];
-    
-    [self.enableLocationSwitch mas_makeConstraints:^(MASConstraintMaker *make){
+
+    [self.enableLocationSwitch mas_makeConstraints:^(MASConstraintMaker* make) {
         make.right.equalTo(self).with.offset(-20);
         make.centerY.equalTo(self);
     }];

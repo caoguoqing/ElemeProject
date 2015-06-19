@@ -10,8 +10,18 @@
 
 @interface UserPreferences : NSObject
 
+// auto location methods
 + (void)enableAutoLocation;
 + (void)disableAutoLocation;
 + (BOOL)isAutoLocation;
+
+// save and get current address
++ (void)saveCurrentAddress:(NSString *)currentAddress;
++ (NSString *)getCurrentAddress;
+
+// first launch
++ (BOOL)isFirstLaunch;
++ (void)disableFirstLaunch;
++ (void)enableFirstLaunch;
 
 @end
