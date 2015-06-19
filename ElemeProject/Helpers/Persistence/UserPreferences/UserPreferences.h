@@ -10,4 +10,8 @@
 
 @interface UserPreferences : NSObject
 
++ (void)enableAutoLocation;
++ (void)disableAutoLocation;
++ (BOOL)isAutoLocation;
+
 @end
