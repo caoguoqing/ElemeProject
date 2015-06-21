@@ -25,7 +25,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 @interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate>
 
 @property (strong, nonatomic) UISearchDisplayController* searchController;
-@property (strong, nonatomic) NSArray* searchHistory;
+@property (strong, nonatomic) NSMutableArray* searchHistory;
 @property (strong, nonatomic) SwitchLocationDataSource* dataSource;
 @property (strong, nonatomic) NSMutableArray* locationHistoryItems;
 
@@ -130,6 +130,15 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     }
     else {
         return 7.5;
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1 ) {  // location history items
+        return UITableViewCellEditingStyleDelete;
+    }else {
+        return UITableViewCellEditingStyleNone;
     }
 }
 

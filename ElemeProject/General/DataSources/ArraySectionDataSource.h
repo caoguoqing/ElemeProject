@@ -18,5 +18,6 @@ typedef void (^TableViewCellConfigureBlock)(id cell, id item);
 configureCellBlocks:(NSArray*)configureCellBlocks;
 
 - (id)itemAtIndexPath:(NSIndexPath*)indexPath;
+- (NSMutableArray *)locationHistoryItems;
 
 @end

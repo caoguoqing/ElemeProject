@@ -9,14 +9,14 @@
 #import "LocationHistory.h"
 #import "NSString+Sandbox.h"
 
-static NSString *const kLocationHistoryPath = @"locationHistory.plist";
+static NSString* const kLocationHistoryPath = @"locationHistory.plist";
 
 @implementation LocationHistory
 
 + (void)insertLocationItem:(NSString*)addressItem
 {
-    NSMutableArray *locationHistoryItems = [self locationHistoryItems];
-    
+    NSMutableArray* locationHistoryItems = [self locationHistoryItems];
+
     if (![locationHistoryItems containsObject:addressItem]) {
         [locationHistoryItems addObject:addressItem];
         [locationHistoryItems writeToFile:[NSString filePathAppendDocumentDirectory:kLocationHistoryPath] atomically:YES];
@@ -25,14 +25,24 @@ static NSString *const kLocationHistoryPath = @"locationHistory.plist";
 
 + (NSMutableArray*)locationHistoryItems
 {
-    NSMutableArray *locationHistoryItems = [NSMutableArray arrayWithContentsOfFile:[NSString filePathAppendDocumentDirectory:kLocationHistoryPath]];
-    
+    NSMutableArray* locationHistoryItems = [NSMutableArray arrayWithContentsOfFile:[NSString filePathAppendDocumentDirectory:kLocationHistoryPath]];
+
     if (!locationHistoryItems) {
         locationHistoryItems = [NSMutableArray new];
     }
-    
+
     return locationHistoryItems;
 }
 
++ (void)deleteLocationItemForIndex:(NSInteger)index
+{
+    NSMutableArray *locationHistoryItems = [self locationHistoryItems];
+    NSString* item = [locationHistoryItems objectAtIndex:index];
+    if (item) {
+        [locationHistoryItems removeObjectAtIndex:index];
+        [locationHistoryItems writeToFile:[NSString filePathAppendDocumentDirectory:kLocationHistoryPath] atomically:YES];
+    }
+    
+}
 
 @end

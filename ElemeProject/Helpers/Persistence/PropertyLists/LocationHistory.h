@@ -12,5 +12,6 @@
 
 + (void)insertLocationItem:(NSString *)locationItem;
 + (NSMutableArray*)locationHistoryItems;
++ (void)deleteLocationItemForIndex:(NSInteger)index;
 
 @end
