@@ -8,7 +8,16 @@
 
 #import "ArraySectionDataSource.h"
 
+@class SwitchLocationDataSource;
+
+@protocol SwitchLocationDataSourceDelegate <NSObject>
+
+- (void)switchLocationDataSource:(SwitchLocationDataSource *)dataSource didDeleteItemWithHistoryItems:(NSMutableArray *)items;
+
+@end
+
 @interface SwitchLocationDataSource : ArraySectionDataSource
 
+@property (weak, nonatomic) id<SwitchLocationDataSourceDelegate> delegate;
 
 @end

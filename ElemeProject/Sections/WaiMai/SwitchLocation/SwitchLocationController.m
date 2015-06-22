@@ -22,12 +22,13 @@ static NSString* const kCurrentLocationCell = @"currentLocationCell";
 static NSString* const kSearchHistoryCell = @"searchHistoryCell";
 static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 
-@interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate>
+@interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate, SwitchLocationDataSourceDelegate>
 
 @property (strong, nonatomic) UISearchDisplayController* searchController;
-@property (strong, nonatomic) NSMutableArray* searchHistory;
 @property (strong, nonatomic) SwitchLocationDataSource* dataSource;
 @property (strong, nonatomic) NSMutableArray* locationHistoryItems;
+
+@property (assign, nonatomic) CGFloat cellSectionGap;
 
 @end
 
@@ -75,7 +76,8 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     // load data from plist and reload table view
     self.locationHistoryItems = [LocationHistory locationHistoryItems];
     [RACObserve(self, locationHistoryItems) subscribeNext:^(id x) {
-        [self.tableView reloadData];
+        [self updateCellSectionGap:self.locationHistoryItems];
+
     }];
 
     // setup table view
@@ -83,7 +85,6 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 
     // Create data source and setup
     TableViewCellConfigureBlock placeholderBlock = ^(UITableViewCell* cell, NSString* address) {
-
     };
     TableViewCellConfigureBlock locationHistoryBlock = ^(UITableViewCell* cell, NSString* address) {
         cell.textLabel.text = address;
@@ -93,6 +94,7 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
               initWithItems:@[ @[ @"sectionOne" ], self.locationHistoryItems, @[ @"sectionThree" ] ]
             cellIdentifiers:@[ kCurrentLocationCell, kSearchHistoryCell, kEnableAutoLocationCell ]
         configureCellBlocks:@[ placeholderBlock, locationHistoryBlock, placeholderBlock ]];
+    self.dataSource.delegate = self;
     self.tableView.dataSource = self.dataSource;
     [self.tableView registerClass:[CurrentLocationCell class] forCellReuseIdentifier:kCurrentLocationCell];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kSearchHistoryCell];
@@ -129,17 +131,27 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
         return 15.0;
     }
     else {
-        return 7.5;
+        return self.cellSectionGap;
     }
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCellEditingStyle)tableView:(UITableView*)tableView editingStyleForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    if (indexPath.section == 1 ) {  // location history items
+    if (indexPath.section == 1) { // location history items
         return UITableViewCellEditingStyleDelete;
-    }else {
+    }
+    else {
         return UITableViewCellEditingStyleNone;
     }
+}
+
+- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 1) {
+        return @"历史位置";
+    }
+
+    return nil;
 }
 
 #pragma mark - UISearchBarDelegate
@@ -150,6 +162,28 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 {
     static NSString* searchLocationCellIdentifier = @"searchLocationCell";
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:searchLocationCellIdentifier];
+}
+
+#pragma mark - SwitchLocationDataSourceDelegate
+- (void)switchLocationDataSource:(SwitchLocationDataSource*)dataSource didDeleteItemWithHistoryItems:(NSMutableArray*)items
+{
+    [self updateCellSectionGap:items];
+}
+
+#pragma mark - Private methods
+- (void)updateCellSectionGap:(NSMutableArray*)locationHistoryItems
+{
+    if (locationHistoryItems.count > 0) {
+        self.cellSectionGap = 30.0f;
+    }
+    else {
+        self.cellSectionGap = 7.50;
+    }
+
+    [UIView animateWithDuration:2.0 animations:^{
+        [self.tableView reloadData];
+    }];
+    
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "SwitchLocationDataSource.h"
 #import "LocationHistory.h"
+#import <ReactiveCocoa.h>
 
 @implementation SwitchLocationDataSource
 
@@ -19,9 +20,10 @@
         // update location history items and record it
         [[self locationHistoryItems] removeObjectAtIndex:indexPath.row];
         [LocationHistory deleteLocationItemForIndex:indexPath.row];
-        
+
         // update UI
         [tableView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationLeft];
+        [self.delegate switchLocationDataSource:self didDeleteItemWithHistoryItems:[self locationHistoryItems]];
     }
 }
 

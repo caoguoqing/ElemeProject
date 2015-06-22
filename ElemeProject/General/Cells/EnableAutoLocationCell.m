@@ -11,6 +11,7 @@
 #import <ReactiveCocoa.h>
 #import "UserPreferences.h"
 
+
 @implementation EnableAutoLocationCell
 
 #pragma mark - Views hierarchy and layout
@@ -18,7 +19,7 @@
 {
     [self addSubview:self.enableCurrentLocationLabel];
     [self addSubview:self.enableLocationSwitch];
-
+    
     // when enableLocationSwitch change state
     [self.enableLocationSwitch.rac_newOnChannel subscribeNext:^(id on) {
         if ([on boolValue]) {

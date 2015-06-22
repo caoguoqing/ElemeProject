@@ -20,4 +20,6 @@ configureCellBlocks:(NSArray*)configureCellBlocks;
 - (id)itemAtIndexPath:(NSIndexPath*)indexPath;
 - (NSMutableArray *)locationHistoryItems;
 
+@property (strong, nonatomic, readonly) NSArray* items;
+
 @end

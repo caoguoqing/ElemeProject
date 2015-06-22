@@ -17,6 +17,8 @@
 {
     [self addSubview:self.locationImageView];
     [self addSubview:self.currentLocationLabel];
+    
+
 }
 
 - (void)defineLayout
