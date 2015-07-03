@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) UIImageView *locationImageView;
 @property (strong, nonatomic) UILabel *currentLocationLabel;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
 
 @end

@@ -60,10 +60,12 @@
 {
     if (!_enableLocationSwitch) {
         _enableLocationSwitch = [UISwitch new];
-        _enableLocationSwitch.on = YES;
+        _enableLocationSwitch.on = [UserPreferences isAutoLocation];
     }
 
     return _enableLocationSwitch;
 }
+
+
 
 @end

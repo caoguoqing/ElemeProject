@@ -110,15 +110,28 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 
     if (indexPath.section == 0 && indexPath.row == 0) {
-        [[LocationManager shareInstance] findCurrentLocation];
-        [RACObserve([LocationManager shareInstance], address) subscribeNext:^(NSString* address) {
-            if (address) { // get the address successfully
-                [LocationHistory insertLocationItem:address];
-                [self dismissViewControllerAnimated:YES completion:nil];
-            }
-            else { // fail to get the address
-            }
-        }];
+        CurrentLocationCell *cell = (CurrentLocationCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+        // activity indicator view start animation
+        cell.locationImageView.hidden = YES;
+        cell.activityIndicatorView.hidden = NO;
+        [cell.activityIndicatorView startAnimating];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [[LocationManager shareInstance] findCurrentLocation];
+            [RACObserve([LocationManager shareInstance], address) subscribeNext:^(NSString* address) {
+                
+                // activity indicator view stop animation
+                [cell.activityIndicatorView stopAnimating];
+                
+                if (address) { // get the address successfully
+                    [LocationHistory insertLocationItem:address];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+                else { // fail to get the address
+                }
+            }];
+        });
     }
 }
 

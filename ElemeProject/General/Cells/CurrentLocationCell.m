@@ -17,8 +17,7 @@
 {
     [self addSubview:self.locationImageView];
     [self addSubview:self.currentLocationLabel];
-    
-
+    [self addSubview:self.activityIndicatorView];
 }
 
 - (void)defineLayout
@@ -29,6 +28,11 @@
     }];
     
     [self.locationImageView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.right.equalTo(self.currentLocationLabel.mas_left).offset(-5);
+        make.centerY.equalTo(self);
+    }];
+    
+    [self.activityIndicatorView mas_makeConstraints:^(MASConstraintMaker *make){
         make.right.equalTo(self.currentLocationLabel.mas_left).offset(-5);
         make.centerY.equalTo(self);
     }];
@@ -54,6 +58,15 @@
     }
     
     return _currentLocationLabel;
+}
+
+- (UIActivityIndicatorView *)activityIndicatorView
+{
+    if (!_activityIndicatorView) {
+        _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    }
+    
+    return _activityIndicatorView;
 }
 
 @end
