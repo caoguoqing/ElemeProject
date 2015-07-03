@@ -20,4 +20,6 @@
 
 @property (weak, nonatomic) id<SwitchLocationDataSourceDelegate> delegate;
 
+- (NSMutableArray *)locationHistoryItems;
+
 @end

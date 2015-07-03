@@ -12,8 +12,13 @@
 
 @implementation SwitchLocationDataSource
 
-#pragma mark - UITableViewDataSource
+#pragma mark - Custom accessors
+- (NSMutableArray *)locationHistoryItems
+{
+    return self.items[1];
+}
 
+#pragma mark - UITableViewDataSource
 - (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
 {
     if (indexPath.section == 1 && editingStyle == UITableViewCellEditingStyleDelete) {
@@ -26,5 +31,7 @@
         [self.delegate switchLocationDataSource:self didDeleteItemWithHistoryItems:[self locationHistoryItems]];
     }
 }
+
+
 
 @end

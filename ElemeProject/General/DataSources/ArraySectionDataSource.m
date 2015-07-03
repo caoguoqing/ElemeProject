@@ -35,11 +35,7 @@ configureCellBlocks:(NSArray*)configureCellBlocks
     return self;
 }
 
-#pragma mark - Custom accessors
-- (NSMutableArray *)locationHistoryItems
-{
-    return self.items[1];
-}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
