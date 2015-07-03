@@ -40,7 +40,7 @@
 #pragma mark - Events Response
 - (void)handleTapGesture:(UITapGestureRecognizer*)gesture
 {
-    SwitchLocationController* destViewController = [[SwitchLocationController alloc] init];
+    SwitchLocationController* destViewController = [[SwitchLocationController alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:destViewController];
 
     [self presentViewController:navigationController animated:YES completion:nil];

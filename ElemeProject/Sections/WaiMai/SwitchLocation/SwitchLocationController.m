@@ -35,9 +35,9 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 @implementation SwitchLocationController
 
 #pragma mark - Lifecycle
-- (instancetype)init
+- (instancetype)initWithStyle:(UITableViewStyle)style
 {
-    self = [super init];
+    self = [super initWithStyle:style];
     if (!self) {
         return nil;
     }
@@ -79,9 +79,6 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
         [self updateCellSectionGap:self.locationHistoryItems];
 
     }];
-
-    // setup table view
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     // Create data source and setup
     TableViewCellConfigureBlock placeholderBlock = ^(UITableViewCell* cell, NSString* address) {
@@ -125,16 +122,6 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     }
 }
 
-- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 15.0;
-    }
-    else {
-        return self.cellSectionGap;
-    }
-}
-
 - (UITableViewCellEditingStyle)tableView:(UITableView*)tableView editingStyleForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     if (indexPath.section == 1) { // location history items
@@ -150,9 +137,57 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     if (section == 1) {
         return @"历史位置";
     }
-
+    
     return nil;
 }
+
+#pragma mark - UITableViewDelegate for changing each section gap
+- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section {
+    return section == 0 ? 15.0f : self.cellSectionGap;
+}
+
+- (CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section {
+    return self.cellSectionGap;
+}
+
+- (UIView*)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    if (section == 1 && [tableView numberOfRowsInSection:section] != 0) {
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 18.0)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(18, -7, CGRectGetWidth(self.tableView.frame), 18.0)];
+        titleLabel.text = @"历史位置";
+        titleLabel.textColor = [UIColor grayColor];
+        
+        titleLabel.font = [UIFont systemFontOfSize:14.0];
+        
+        [view addSubview:titleLabel];
+        
+        return view;
+    }else {
+        return [[UIView alloc] initWithFrame:CGRectZero];
+    }
+    
+}
+
+- (UIView*)tableView:(UITableView*)tableView viewForFooterInSection:(NSInteger)section {
+    
+    if (section == 2) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 18.0)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(18, 7, CGRectGetWidth(self.tableView.frame), 18.0)];
+        titleLabel.text = @"关闭自动定位后，每次打开应用会默认使用上一次地址";
+        titleLabel.textColor = [UIColor grayColor];
+        
+        titleLabel.font = [UIFont systemFontOfSize:12.0];
+        
+        [view addSubview:titleLabel];
+        
+        return view;
+    }else {
+        return [[UIView alloc] initWithFrame:CGRectZero];
+    }
+}
+
 
 #pragma mark - UISearchBarDelegate
 
@@ -174,10 +209,10 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 - (void)updateCellSectionGap:(NSMutableArray*)locationHistoryItems
 {
     if (locationHistoryItems.count > 0) {
-        self.cellSectionGap = 30.0f;
+        self.cellSectionGap = 15.0f;
     }
     else {
-        self.cellSectionGap = 7.50;
+        self.cellSectionGap = 3.5f;
     }
 
     [UIView animateWithDuration:2.0 animations:^{
