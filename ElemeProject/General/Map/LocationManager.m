@@ -20,8 +20,10 @@ static NSString* const kAMAP_API_KEY = @"abf0b40fdb4377ef5a7e4eaf6d6f7427";
 // Location
 @property (strong, nonatomic) MAMapView* mapView;
 @property (strong, nonatomic) CLLocation* currentLocation;
+@property (strong, nonatomic) NSString *currentCity;
 // AMapSearch
 @property (strong, nonatomic) AMapSearchAPI* mapSearch;
+@property (strong, nonatomic) AMapPlaceSearchRequest *placeSearchRequest;
 
 @end
 
@@ -62,6 +64,18 @@ static NSString* const kAMAP_API_KEY = @"abf0b40fdb4377ef5a7e4eaf6d6f7427";
     return self;
 }
 
+#pragma mark - Custom Accessors
+- (AMapPlaceSearchRequest *)placeSearchRequest
+{
+    if (!_placeSearchRequest) {
+        _placeSearchRequest = [AMapPlaceSearchRequest new];
+        _placeSearchRequest.searchType = AMapSearchType_PlaceKeyword;
+        _placeSearchRequest.requireExtension = YES;
+    }
+    
+    return _placeSearchRequest;
+}
+
 #pragma mark - Business methods
 - (void)findCurrentLocation
 {
@@ -81,13 +95,37 @@ static NSString* const kAMAP_API_KEY = @"abf0b40fdb4377ef5a7e4eaf6d6f7427";
     self.address = nil;
 }
 
+- (void)searchHintResultsWithKeyWord:(NSString *)keyWord
+{
+    self.placeSearchRequest.keywords = keyWord;
+    self.placeSearchRequest.city = @[self.currentCity];
+    // send search request
+    [self.mapSearch AMapPlaceSearch:self.placeSearchRequest];
+}
+
 #pragma mark - AMapSearchDelegate
 - (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest*)request response:(AMapReGeocodeSearchResponse*)response
 {
     AMapAddressComponent* addressComponent = response.regeocode.addressComponent;
     if (addressComponent) {
         self.address = [NSString stringWithFormat:@"%@%@%@附近", addressComponent.district, addressComponent.township, addressComponent.neighborhood];
+        // save the current city for search place
+        self.currentCity = addressComponent.city;
     }
+}
+
+- (void)onPlaceSearchDone:(AMapPlaceSearchRequest *)request response:(AMapPlaceSearchResponse *)response
+{
+    // clear last search result data
+    self.searchHintResults = nil;
+    
+    // search result empty
+    if (response.pois.count == 0) {
+        return;
+    }
+    
+    // save the search result
+    self.searchHintResults = response.pois;
 }
 
 @end

@@ -18,6 +18,13 @@ typedef void (^TableViewCellConfigureBlock)(id cell, id item);
      cellIdentifier:(NSString *)cellIdentifier
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)cellIdentifier
+     tableViewStyle:(UITableViewCellStyle)tableViewStyle
+ configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
+
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+
+@property (nonatomic, strong) NSArray* items;
 
 @end

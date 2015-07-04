@@ -13,20 +13,25 @@
 #import "SwitchLocationDataSource.h"
 #import "CurrentLocationCell.h"
 #import "EnableAutoLocationCell.h"
+#import "ArrayDataSource.h"
 #import "LocationHistory.h"
 #import "LocationManager.h"
+#import <AMapSearch/AMapSearchAPI.h>
 #import <ReactiveCocoa.h>
 
 // Define constants
 static NSString* const kCurrentLocationCell = @"currentLocationCell";
 static NSString* const kSearchHistoryCell = @"searchHistoryCell";
 static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
+static NSString* const kSearchTipsResultCell = @"searchTipsResultCell";
 
 @interface SwitchLocationController () <UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate, SwitchLocationDataSourceDelegate>
 
 @property (strong, nonatomic) UISearchDisplayController* searchController;
 @property (strong, nonatomic) SwitchLocationDataSource* dataSource;
+@property (strong, nonatomic) ArrayDataSource *searchResultDataSource;
 @property (strong, nonatomic) NSMutableArray* locationHistoryItems;
+@property (strong, nonatomic) NSArray *searchHintResults;
 
 @property (assign, nonatomic) CGFloat cellSectionGap;
 
@@ -96,6 +101,27 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
     [self.tableView registerClass:[CurrentLocationCell class] forCellReuseIdentifier:kCurrentLocationCell];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kSearchHistoryCell];
     [self.tableView registerClass:[EnableAutoLocationCell class] forCellReuseIdentifier:kEnableAutoLocationCell];
+    
+    // setup search display controller's table view data source
+    self.searchResultDataSource = [[ArrayDataSource alloc] initWithItems:self.searchHintResults cellIdentifier:kSearchTipsResultCell tableViewStyle:UITableViewCellStyleSubtitle configureCellBlock:^(UITableViewCell *cell, AMapPOI *item) {
+        cell.textLabel.text = item.name;
+        cell.detailTextLabel.text = item.address;
+    }];
+    
+    self.searchDisplayController.searchResultsTableView.dataSource = self.searchResultDataSource;
+    
+    // when search result change, reload table
+    [[RACObserve(self, searchHintResults) ignore:nil] subscribeNext:^(NSArray *tips) {
+       
+        // filter name or address that value is empty or nil
+         self.searchResultDataSource.items = [[[tips rac_sequence] filter:^BOOL(AMapPOI *value) {
+            return value.name != nil && ![value.name isEqualToString:@""] &&
+                value.address != nil && ![value.address isEqualToString:@""];
+        }] array];
+        
+        
+        [self.searchDisplayController.searchResultsTableView reloadData];
+    }];
 }
 
 #pragma mark - Event Response
@@ -202,14 +228,22 @@ static NSString* const kEnableAutoLocationCell = @"enableAutoLocationCell";
 }
 
 
-#pragma mark - UISearchBarDelegate
-
 #pragma mark - UISearchDisplayDelegate
 
 - (void)searchDisplayController:(UISearchDisplayController*)controller willShowSearchResultsTableView:(UITableView*)tableView
 {
     static NSString* searchLocationCellIdentifier = @"searchLocationCell";
     [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:searchLocationCellIdentifier];
+}
+
+- (BOOL)searchDisplayController:(nonnull UISearchDisplayController *)controller shouldReloadTableForSearchString:(nullable NSString *)searchString
+{
+    [[LocationManager shareInstance] searchHintResultsWithKeyWord:searchString];
+    [RACObserve([LocationManager shareInstance], searchHintResults) subscribeNext:^(NSMutableArray *searchHintResults) {
+        self.searchHintResults = searchHintResults;
+    }];
+   
+    return NO;
 }
 
 #pragma mark - SwitchLocationDataSourceDelegate

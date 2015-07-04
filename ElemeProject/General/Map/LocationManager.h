@@ -15,8 +15,10 @@
 // Methods
 + (LocationManager*)shareInstance;
 - (void)findCurrentLocation;
+- (void)searchHintResultsWithKeyWord:(NSString *)keyWord;
 
 // Properties
 @property (copy, nonatomic, readonly) NSString* address;
+@property (strong, nonatomic) NSArray *searchHintResults;
 
 @end

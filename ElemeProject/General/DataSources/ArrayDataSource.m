@@ -10,9 +10,9 @@
 
 @interface ArrayDataSource ()
 
-@property (nonatomic, strong) NSArray* items;
 @property (nonatomic, copy) NSString* cellIdentifier;
 @property (nonatomic, copy) TableViewCellConfigureBlock configureCellBlock;
+@property (assign, nonatomic) UITableViewCellStyle tableViewStyle;
 
 @end
 
@@ -29,11 +29,30 @@
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock;
 {
     self = [super init];
-    if (self) {
-        _items = items;
-        _cellIdentifier = cellIdentifier;
-        _configureCellBlock = [configureCellBlock copy];
+    
+    if (!self) {
+        return nil;
     }
+    
+    return [self initWithItems:items cellIdentifier:cellIdentifier tableViewStyle:UITableViewCellStyleDefault configureCellBlock:configureCellBlock];
+}
+
+- (id)initWithItems:(NSArray *)items
+     cellIdentifier:(NSString *)cellIdentifier
+     tableViewStyle:(UITableViewCellStyle)tableViewStyle
+ configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock
+{
+    self = [super init];
+    
+    if (!self) {
+        return nil;
+    }
+    
+    _items = items;
+    _cellIdentifier = cellIdentifier;
+    _configureCellBlock = [configureCellBlock copy];
+    _tableViewStyle = tableViewStyle;
+    
     return self;
 }
 
@@ -46,8 +65,14 @@
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
+    UITableViewCell *cell = nil;
+    if (self.tableViewStyle != UITableViewCellStyleDefault) {
+        cell = [[UITableViewCell alloc] initWithStyle:self.tableViewStyle reuseIdentifier:self.cellIdentifier];
+    }else {
+        cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
                                                             forIndexPath:indexPath];
+    }
+    
     id item = [self itemAtIndexPath:indexPath];
     self.configureCellBlock(cell, item);
     return cell;
