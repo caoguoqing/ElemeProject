@@ -288,7 +288,7 @@ Sprint backlog有多种形式来保存，其中包括挂在墙上的任务板、
 ![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Need-Remove-User-Story.png)
 
 * 需要向sprint中添加一些用户故事
-![](https://github.com/samlaudev/ElemeProject/raw/master/ScreenShots/Need-Remove-User-Story.png)
+![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Need-Add-User-Story.png)
 
 * 需要调整用户故事优先级
 ![](https://raw.githubusercontent.com/samlaudev/ElemeProject/master/ScreenShots/Need-Adjust-Priority.png)
